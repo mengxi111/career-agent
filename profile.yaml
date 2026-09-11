@@ -1,0 +1,66 @@
+# 个人画像与岗位匹配规则。修改本文件不需要改 Python 代码。
+degree: 研究生
+job_type: 校招
+target_cohort: 2027
+
+directions:
+  - C++ 软件开发与软件测试
+  - 大模型与智能体应用
+  - 具身智能、机器人与机械臂
+  - 计算机视觉、VLA、强化学习与模仿学习
+
+skills:
+  - C++
+  - Python
+  - Linux
+  - ROS
+  - PyTorch
+  - 计算机视觉
+
+# 只有这里列出的真实经历会被 V4-Pro 当作直接项目证据。
+# 示例：使用 C++、ROS 和深度相机完成机器人感知项目。
+project_evidence: []
+
+# 感兴趣但尚未形成完整项目证据的方向不会被当作已掌握能力。
+learning_targets:
+  - 大模型应用、RAG 与智能体工作流
+  - 具身智能、VLA、强化学习与模仿学习
+
+unverified_skills: []
+secondary_directions: []
+
+target_roles:
+  - name: C++ 软件开发
+    keywords: [C++, C/C++, 软件开发, 系统软件, 客户端, 后端, 嵌入式]
+  - name: 软件测试
+    keywords: [软件测试, 测试开发, SDET, QA, 自动化测试]
+  - name: 大模型与智能体
+    keywords: [大模型, LLM, 多模态, RAG, 智能体, Agent, Agentic]
+  - name: 具身智能与机器人
+    keywords: [具身智能, 机器人, Robotics, 机械臂, 运动控制, 运动规划]
+  - name: 视觉与学习算法
+    keywords: [计算机视觉, 机器视觉, 感知, SLAM, 点云, VLA, VLM, 强化学习, 模仿学习]
+
+preferred_cities: []
+
+excluded_title_keywords:
+  - 销售
+  - 客服
+  - 法务
+  - 财务
+  - 人力资源
+  - 行政
+  - 运营
+  - 产品经理
+
+# 五项上限必须合计 100。程序会按证据等级和核心缺口进一步封顶。
+score_component_limits:
+  core_direction: 25
+  required_skills: 25
+  project_evidence: 25
+  engineering_stack: 15
+  basic_criteria: 10
+
+score_thresholds:
+  recommend: 80
+  consider: 60
