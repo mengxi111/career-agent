@@ -2,6 +2,11 @@ degree: 本科
 job_type: 校招
 target_cohort: 2026
 
+directions:
+  - 大模型应用开发
+  - AI应用开发
+  - Python后端开发
+
 skills:
   - Python
   - Flask
