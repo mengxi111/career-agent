@@ -1,8 +1,22 @@
 # Career Agent：AI 校招情报系统
 
+[![Tests](https://github.com/mengxi111/career-agent/actions/workflows/tests.yml/badge.svg)](https://github.com/mengxi111/career-agent/actions/workflows/tests.yml)
+
 每天自动抓取数百家企业的校招岗位，过滤实习和社招，使用 DeepSeek 按个人技术栈分析匹配度，生成静态 HTML 报告，并可选推送到飞书。
 
 本仓库是可直接复用的 GitHub Template。公司名单、爬虫和校招过滤规则已经配置好；每位使用者只需要填写自己的 `profile.yaml`、提供 DeepSeek API Key，再启用 GitHub Actions。
+
+## 运行效果
+
+![Career Agent 岗位情报面板](docs/screenshots/dashboard.png)
+
+截图使用本地脱敏数据生成，展示岗位总览、企业覆盖、筛选和分页能力。
+
+## 架构概览
+
+系统以 GitHub Actions 为调度入口，依次完成多源抓取、岗位标准化、届别过滤、增量 AI 分析、静态报告发布和飞书通知。本地投递管理器读取同一岗位库，但不参与云端抓取流程。
+
+详细的数据流、时序和设计取舍见 [`docs/architecture.md`](docs/architecture.md)。
 
 ## 主要功能
 
